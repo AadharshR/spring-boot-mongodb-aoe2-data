@@ -14,6 +14,11 @@ public class CivilizationsImplService implements CivilizationsService {
 	CivilizationsDao dao;
     @Override
     public Collection<Civilizations> getAllCivilizations() {
+    	System.out.println("OUTPUT"+dao.findAll());
         return dao.findAll();
     }
+	public Civilizations update(Civilizations emp) {
+		// TODO Auto-generated method stub
+		return dao.save(emp);
+	}
 }
